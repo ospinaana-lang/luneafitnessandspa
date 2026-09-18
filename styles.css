@@ -1,0 +1,835 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: #3b3334;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        -45deg,
+        #f7f7f7,
+        #ff009d,
+        #eb9cd7,
+        #f394d7,
+        #f9f5fa,
+        #f75ec9,
+        #f7e4f2ef
+    );
+    background-size: 400% 400%;
+    animation: fondoAnimado 10s ease infinite;
+}
+@keyframes fondoAnimado {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+header {
+
+    width: 100%;
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background: rgba(250, 151, 192, 0.267);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 10px 30px #83414140;
+
+}
+nav{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+nav a {
+    text-decoration: none;
+    color:#83220aef;
+    background: linear-gradient( 135deg, rgba(231, 52, 207, 0.555),rgba(0, 81, 255, 0.301) )
+    padding: 12px 22px;
+    font-size: 15px; 
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px white; 
+}
+/* ------------------------------------------------------------
+   TÍTULOS Y SECCIONES
+   ------------------------------------------------------------ */
+
+.seccion {
+    width: 90%;
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-seccion span,
+.nosotros-texto span,
+.promocion-texto span {
+    color: #cf059d;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.titulo-seccion p {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* ------------------------------------------------------------
+   INFORMACIÓN PRINCIPAL
+   ------------------------------------------------------------ */
+
+.informacion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.90);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+}
+
+.informacion h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.informacion p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ------------------------------------------------------------
+   BUSCADOR DE PRODUCTOS
+   ------------------------------------------------------------ */
+
+.herramientas-productos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.herramientas-productos input,
+.herramientas-productos select {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.herramientas-productos input {
+    width: 350px;
+}
+
+.herramientas-productos select {
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------
+   PRODUCTOS
+   ------------------------------------------------------------ */
+
+.productos-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.producto {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido-producto {
+    padding: 20px;
+}
+
+.categoria {
+    display: inline-block;
+    font-size: 12px;
+    color: deeppink;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.contenido-producto h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.contenido-producto p {
+    font-size: 14px;
+    color: black;
+    line-height: 1.5;
+    min-height: 65px;
+}
+
+.precio {
+    display: block;
+    font-size: 21px;
+    margin: 15px 0;
+    color: #f13a8f;
+}
+
+.btn-producto {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    background: #020617;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-producto:hover {
+    background: deeppink;
+}
+
+
+/* ------------------------------------------------------------
+   SERVICIOS
+   ------------------------------------------------------------ */
+
+.servicios {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servicio {
+    background: rgba(255,255,255,0.92);
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.icono-servicio {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.servicio h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.servicio p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* ------------------------------------------------------------
+   PROMOCIONES
+   ------------------------------------------------------------ */
+
+.promociones {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 50px;
+    border-radius: 25px;
+    background:pink;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.promocion-texto h2 {
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.promocion-texto p {
+    color: #0c0c0c;
+    margin-bottom: 20px;
+}
+
+.promocion-precio {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 5px solid #cf056a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.promocion-precio strong {
+    font-size: 48px;
+}
+
+.promocion-precio span {
+    font-weight: bold;
+}
+
+.btn-promocion {
+    padding: 13px 25px;
+    border: none;
+    border-radius: 8px;
+    background:#cf059d;
+    color: #f5f4f4;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------
+   NOSOTROS
+   ------------------------------------------------------------ */
+
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+}
+
+.nosotros-texto h2 {
+    font-size: 38px;
+    margin: 10px 0 20px;
+}
+
+.nosotros-texto p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.datos-empresa {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.datos-empresa div {
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-empresa strong {
+    font-size: 25px;
+    color: #c0307f;
+}
+
+.datos-empresa span {
+    font-size: 13px;
+}
+
+
+/* ------------------------------------------------------------
+   CONTACTO
+   ------------------------------------------------------------ */
+
+.contacto-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: rgba(255,255,255,0.90);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.datos-contacto h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.datos-contacto p {
+    margin: 18px 0;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.redes a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: pink;
+    color: black;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    margin-bottom: 18px;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.btn-enviar {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: hotpink;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------
+   CARRITO
+   ------------------------------------------------------------ */
+
+.carrito {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100vh;
+    background: white;
+    z-index: 1000;
+    padding: 25px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.30);
+    transition: 0.3s;
+    overflow-y: auto;
+}
+
+.carrito.abierto {
+    right: 0;
+}
+
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cerrar-carrito {
+    border: none;
+    background: pink;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.producto-carrito {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.producto-carrito h4 {
+    margin-bottom: 7px;
+}
+
+.producto-carrito p {
+    margin-bottom: 10px;
+}
+
+.btn-eliminar {
+    border: none;
+    padding: 6px 10px;
+    background: deeppink;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total-carrito {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    font-size: 20px;
+}
+
+.btn-comprar {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: lightpink;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botonCarrito {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: deeppink;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.30);
+    z-index: 900;
+}
+
+#contadorCarrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: deeppink;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+
+footer {
+    margin-top: 80px;
+    background: rgb(240, 153, 167);
+    color: rgb(15, 15, 15);
+}
+
+.footer-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-contenido h2 {
+    margin-bottom: 15px;
+}
+
+.footer-contenido h3 {
+    margin-bottom: 15px;
+}
+
+.footer-contenido p {
+    color: #1b1919;
+    line-height: 1.6;
+}
+
+.footer-contenido a {
+    display: block;
+    text-decoration: none;
+    color: #202020;
+    margin: 10px 0;
+}
+
+.footer-contenido a:hover {
+    color: hotpink;
+}
+
+.copyright {
+    border-top: 1px solid #c71313;
+    text-align: center;
+    padding: 20px;
+}
+
+.copyright p {
+    margin: 5px;
+    color: #0f0f0f;
+}
+
+
+/* ------------------------------------------------------------
+   CHAT
+   ------------------------------------------------------------ */
+
+#mensajes {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chat {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+}
+
+.chat h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bot,
+.cliente {
+    max-width: 80%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+}
+
+.bot {
+    background: deeppink;
+    color: white;
+    margin-right: auto;
+}
+
+.cliente {
+    background: hotpink;
+    color: white;
+    margin-left: auto;
+}
+
+.controles {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.controles input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.controles button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #020617;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------
+   DISEÑO PARA CELULARES
+   ------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 90%;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promociones {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 20px;
+    }
+
+    .promocion-texto h2 {
+        font-size: 30px;
+    }
+
+    .datos-empresa {
+        flex-wrap: wrap;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .carrito {
+        width: 100%;
+        right: -100%;
+    }
+
+}
+
+#botonInicio{
+    position: fixed;
+    right: 95px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: hotpink;
+    color: white;
+
+    text-decoration: Inicio;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 20px black;
+
+    z-index: 900;
+
+    transition: 0.3s;
+}
+
+#botonInicio:hover{
+    background-color: deeppink;
+    transition: translateY(-5px);
+}
+
+/* EFECTO DEL LOGO*/
+
+.logo{
+    display: inline-block;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.logo:hover{
+    transform: translateY(-8px)scale(1.03);
+    filter: brightness(1.1);
+}
+
+.logo{
+    display: inline-block;
+    transition: transform 0.7s ease;
+    cursor: pointer;
+}
+
+.logo:hover{
+    transform: rotate(180deg) scale(1);
+}
