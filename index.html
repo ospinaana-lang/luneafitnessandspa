@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunea Fitness and Spa</title>
+    <link rel="stylesheet" href="styles.css">
+
+<body>
+
+    <header>
+        <h1>Lunea Fitness and Spa</h1>
+        <p>El mejor espacio para cuidarte y relajarte.</p>
+<a href="#productos"class="logo">
+        <img src="https://lh3.googleusercontent.com/d/1v_8tgI7l7qM-agVfH792lwkfmOGSDNjr"
+             alt="Logo"
+             width="200">
+</a>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Planes</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#promociones">Promociones</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="informacion">
+            <h2>Bienvenido</h2>
+
+            <p>
+                Lunea Fitness and Spa es un espacio para cuidarte y ejercitarte,
+                pero al mismo tiempo relajarte después de cada entrenamiento.
+            </p>
+        </section>
+
+        <section class="chat">
+
+            <h2>Asistente Virtual</h2>
+
+            <div id="mensajes">
+
+                <div class="bot">
+                    ¡Hola! Soy el asistente Lunea Fitness and Spa.
+                </div>
+
+                <div class="cliente">
+                    Quiero conocer los planes disponibles.
+                </div>
+
+                <div class="bot">
+                    Tenemos gimnasio, spa, sauna, jacuzzi y mucho más.
+                </div>
+
+            </div>
+
+            <div class="controles">
+
+                <input
+                    type="text"
+                    id="mensajeInput"
+                    placeholder="Escribe tu mensaje...">
+
+                <button id="btnEnviar">
+                    Enviar
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ===================================================== -->
+    <!-- PLANES -->
+    <!-- ===================================================== -->
+
+    <section id="productos" class="seccion">
+
+        <div class="titulo-seccion">
+
+            <span>PLANES EXCLUSIVOS</span>
+
+            <h2>Nuestros planes</h2>
+
+            <p>
+                Elige el plan perfecto para entrenar, relajarte
+                y disfrutar de una experiencia de bienestar.
+            </p>
+
+        </div>
+
+
+        <!-- BUSCADOR -->
+
+        <div class="herramientas-productos">
+
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar plan...">
+
+            <select id="filtroCategoria">
+
+                <option value="todos">
+                    Todos los planes
+                </option>
+
+                <option value="planes">
+                    Planes de suscripción
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="productos-grid" id="listaProductos">
+
+
+            <!-- ================================================= -->
+            <!-- PLAN 1 - ESSENTIAL -->
+            <!-- ================================================= -->
+
+            <article
+                class="producto"
+                data-categoria="planes"
+                data-nombre="Plan Essential">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80"
+                        alt="Plan Essential">
+
+                </div>
+
+                <div class="contenido-producto">
+
+                    <span class="categoria">
+                        PLAN ESSENTIAL
+                    </span>
+
+                    <h3>
+                        Plan Essential
+                    </h3>
+
+                    <p>
+                        Acceso al gimnasio, vestidores y duchas.
+                        Ideal para comenzar tu rutina de entrenamiento.
+                    </p>
+
+                    <strong class="precio">
+                        $89.900
+                    </strong>
+
+                    <button
+                        class="btn-producto"
+                        onclick="agregarCarrito('Plan Essential', 89900)">
+
+                        Agregar al carrito
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- PLAN 2 - RELAX -->
+            <!-- ================================================= -->
+
+            <article
+                class="producto"
+                data-categoria="planes"
+                data-nombre="Plan Relax">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+                        alt="Plan Relax">
+
+                </div>
+
+                <div class="contenido-producto">
+
+                    <span class="categoria">
+                        PLAN RELAX
+                    </span>
+
+                    <h3>
+                        Plan Relax
+                    </h3>
+
+                    <p>
+                        Gimnasio, sauna, jacuzzi y acceso a vestidores.
+                        Perfecto para entrenar y relajarte.
+                    </p>
+
+                    <strong class="precio">
+                        $129.900
+                    </strong>
+
+                    <button
+                        class="btn-producto"
+                        onclick="agregarCarrito('Plan Relax', 129900)">
+
+                        Agregar al carrito
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- PLAN 3 - PREMIUM -->
+            <!-- ================================================= -->
+
+            <article
+                class="producto"
+                data-categoria="planes"
+                data-nombre="Plan Premium">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80"
+                        alt="Plan Premium">
+
+                </div>
+
+                <div class="contenido-producto">
+
+                    <span class="categoria">
+                        PLAN PREMIUM
+                    </span>
+
+                    <h3>
+                        Plan Premium
+                    </h3>
+
+                    <p>
+                        Gimnasio, spa, sauna, jacuzzi y clases grupales
+                        para complementar tu bienestar.
+                    </p>
+
+                    <strong class="precio">
+                        $169.900
+                    </strong>
+
+                    <button
+                        class="btn-producto"
+                        onclick="agregarCarrito('Plan Premium', 169900)">
+
+                        Agregar al carrito
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- PLAN 4 - VIP WELLNESS -->
+            <!-- ================================================= -->
+
+            <article
+                class="producto"
+                data-categoria="planes"
+                data-nombre="Plan VIP Wellness">
+
+                <div class="imagen-producto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=600&q=80"
+                        alt="Plan VIP Wellness">
+
+                </div>
+
+                <div class="contenido-producto">
+
+                    <span class="categoria">
+                        PLAN VIP WELLNESS
+                    </span>
+
+                    <h3>
+                        Plan VIP Wellness
+                    </h3>
+
+                    <p>
+                        Gimnasio, spa, sauna, jacuzzi, clases,
+                        asesoría personalizada y beneficios exclusivos.
+                    </p>
+
+                    <strong class="precio">
+                        $229.900
+                    </strong>
+
+                    <button
+                        class="btn-producto"
+                        onclick="agregarCarrito('Plan VIP Wellness', 229900)">
+
+                        Agregar al carrito
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- SERVICIOS -->
+    <!-- ===================================================== -->
+
+    <section id="servicios" class="seccion servicios">
+
+        <div class="titulo-seccion">
+
+            <span>BIENESTAR Y RELAJACIÓN</span>
+
+            <h2>Nuestros servicios</h2>
+
+            <p>
+                Todo lo que necesitas para cuidar tu cuerpo,
+                relajarte y sentirte increíble.
+            </p>
+
+        </div>
+
+
+        <div class="servicios-grid">
+
+
+            <article class="servicio">
+
+                <div class="icono-servicio">
+                    🏋️‍♀️
+                </div>
+
+                <h3>
+                    Entrenamiento
+                </h3>
+
+                <p>
+                    Espacio equipado para realizar diferentes
+                    rutinas de entrenamiento y actividad física.
+                </p>
+
+            </article>
+
+
+            <article class="servicio">
+
+                <div class="icono-servicio">
+                    💗
+                </div>
+
+                <h3>
+                    Zona Spa
+                </h3>
+
+                <p>
+                    Un espacio diseñado para relajarte y disfrutar
+                    de momentos de descanso y bienestar.
+                </p>
+
+            </article>
+
+
+            <article class="servicio">
+
+                <div class="icono-servicio">
+                    🧖‍♀️
+                </div>
+
+                <h3>
+                    Sauna y Jacuzzi
+                </h3>
+
+                <p>
+                    Disfruta de nuestras zonas de sauna y jacuzzi
+                    después de tu entrenamiento.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- PROMOCIONES -->
+    <!-- ===================================================== -->
+
+    <section id="promociones" class="promociones">
+
+        <div class="promocion-texto">
+
+            <span>
+                PROMOCIÓN ESPECIAL
+            </span>
+
+            <h2>
+                ¡Hasta 20% de descuento!
+            </h2>
+
+            <p>
+                Aprovecha nuestras promociones especiales
+                en planes seleccionados.
+            </p>
+
+            <button
+                class="btn-promocion"
+                onclick="mostrarPromocion()">
+
+                Ver promoción
+
+            </button>
+
+        </div>
+
+
+        <div class="promocion-precio">
+
+            <strong>
+                20%
+            </strong>
+
+            <span>
+                OFF
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- NOSOTROS -->
+    <!-- ===================================================== -->
+
+    <section id="nosotros" class="seccion nosotros">
+
+        <div class="nosotros-imagen">
+
+            <img
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
+                alt="Lunea Fitness and Spa">
+
+        </div>
+
+
+        <div class="nosotros-texto">
+
+            <span>
+                CONÓCENOS
+            </span>
+
+            <h2>
+                Bienestar pensado para ti
+            </h2>
+
+            <p>
+                Lunea Fitness and Spa nació con el objetivo de ofrecer
+                un espacio donde nuestros clientes puedan ejercitarse,
+                relajarse y cuidar de su bienestar.
+            </p>
+
+            <p>
+                Contamos con diferentes espacios y servicios para que
+                cada persona pueda encontrar el equilibrio entre
+                entrenamiento y relajación.
+            </p>
+
+
+            <div class="datos-empresa">
+
+                <div>
+
+                    <strong>
+                        +100
+                    </strong>
+
+                    <span>
+                        Clientes
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        +4
+                    </strong>
+
+                    <span>
+                        Planes
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        100%
+                    </strong>
+
+                    <span>
+                        Bienestar
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- CONTACTO -->
+    <!-- ===================================================== -->
+
+    <section id="contacto" class="seccion contacto">
+
+        <div class="titulo-seccion">
+
+            <span>
+                CONTÁCTANOS
+            </span>
+
+            <h2>
+                Hablemos
+            </h2>
+
+            <p>
+                ¿Tienes alguna pregunta? Escríbenos.
+            </p>
+
+        </div>
+
+
+        <div class="contacto-contenido">
+
+
+            <div class="datos-contacto">
+
+                <h3>
+                    Información de contacto
+                </h3>
+
+                <p>
+                    📍 Medellín, Colombia
+                </p>
+
+                <p>
+                    📞 +57 300 000 0000
+                </p>
+
+                <p>
+                    ✉️ contacto@luneafitness.com
+                </p>
+
+                <p>
+                    🕒 Lunes - Domingo: 8:00 AM - 8:00 PM
+                </p>
+
+
+                <div class="redes">
+
+                    <a href="#" target="_blank">
+                        Instagram
+                    </a>
+
+                    <a href="#" target="_blank">
+                        Facebook
+                    </a>
+
+                    <a href="#" target="_blank">
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="formulario"
+                id="formularioContacto">
+
+                <label for="nombre">
+                    Nombre
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Escribe tu nombre"
+                    required>
+
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="ejemplo@gmail.com"
+                    required>
+
+
+                <label for="asunto">
+                    Asunto
+                </label>
+
+                <input
+                    type="text"
+                    id="asunto"
+                    placeholder="¿En qué podemos ayudarte?"
+                    required>
+
+
+                <label for="mensaje">
+                    Mensaje
+                </label>
+
+                <textarea
+                    id="mensaje"
+                    rows="5"
+                    placeholder="Escribe tu mensaje..."
+                    required></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn-enviar">
+
+                    Enviar mensaje
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- CARRITO -->
+    <!-- ===================================================== -->
+
+    <aside id="carrito" class="carrito">
+
+        <div class="carrito-header">
+
+            <h2>
+                Mi carrito
+            </h2>
+
+            <button
+                onclick="cerrarCarrito()"
+                class="cerrar-carrito">
+
+                X
+
+            </button>
+
+        </div>
+
+
+        <div id="productosCarrito">
+
+            <p>
+                No hay productos en el carrito.
+            </p>
+
+        </div>
+
+
+        <div class="total-carrito">
+
+            <span>
+                Total:
+            </span>
+
+            <strong id="total">
+                $0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="btn-comprar"
+            onclick="finalizarCompra()">
+
+            Finalizar suscripción
+
+        </button>
+
+    </aside>
+
+
+    <!-- BOTÓN PARA ABRIR CARRITO -->
+
+    <button
+        id="botonCarrito"
+        onclick="abrirCarrito()">
+
+        🛍️
+
+        <span id="contadorCarrito">
+            0
+        </span>
+
+    </button>
+     
+<a
+href="#"
+id="botonInicio"
+title="Volver al incio"
+>
+    ↑ 
+    </a>
+    <!-- ===================================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================================== -->
+
+    <footer>
+
+        <div class="footer-contenido">
+
+
+            <div>
+
+                <h2>
+                    LUNEA FITNESS AND SPA
+                </h2>
+
+                <p>
+                    Entrenamiento, bienestar y relajación
+                    en un solo lugar.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Navegación
+                </h3>
+
+                <a href="#inicio">
+                    Inicio
+                </a>
+
+                <a href="#productos">
+                    Planes
+                </a>
+
+                <a href="#servicios">
+                    Servicios
+                </a>
+
+                <a href="#promociones">
+                    Promociones
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Empresa
+                </h3>
+
+                <a href="#nosotros">
+                    Nosotros
+                </a>
+
+                <a href="#contacto">
+                    Atención al cliente
+                </a>
+
+                <a href="#contacto">
+                    Preguntas
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Lunea Fitness and Spa.
+                Todos los derechos reservados.
+            </p>
+
+            <p>
+                Sitio web desarrollado por Mariangel Suarez, Julieta Marquez, Ana Sofia Ospina y Samuel Sanchez.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ===================================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ===================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
